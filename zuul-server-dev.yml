@@ -1,0 +1,35 @@
+zuul:
+  routes:
+    member:
+      path: /member/**  #映射路径
+      serviceId: member  # 指定服务端的名称
+    tools:
+      path: /tools/**
+      serviceId: tools
+    pcone-web:
+      path: /pcone-web/**
+      serviceId: pcone-web
+    ticket:
+      path: /ticket/**
+      serviceId: ticket
+    sys-account:
+      path: /sys-account/**
+      serviceId: sys-account
+    circle-mall:
+      path: /circle-mall/**
+      serviceId: circle-mall
+    circle-core:
+      path: /circle-core/**
+      serviceId: circle-core
+    integral-mall:
+      path: /integral-mall/**
+      serviceId: integral-mall
+server:
+  port: 8031
+eureka:
+  client:
+    service-url:
+      defaultZone: http://happymix:20190415@localhost:8761/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
+    lease-renewal-interval-in-seconds: 5    #设置心跳时长
