@@ -26,6 +26,9 @@ zuul:
     integral-mall:
       path: /integral-mall/**
       serviceId: integral-mall
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
 server:
   port: 8031
 eureka:
