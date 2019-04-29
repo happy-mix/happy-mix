@@ -2,6 +2,20 @@ zuul:
   host:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
+  ignored-services: '*'
+  routes:
+    wechat-member:
+      path: /wechat-member/**
+      serviceId: wechat-member-web
+    wechat-assistant:
+      path: /wechat-assistant/**
+      serviceId: wechat-assistant-web
+    pc-system:
+      path: /pc-system/**
+      serviceId: pc-system-web
+    pc-circle:
+      path: /pc-circle/**
+      serviceId: pc-circle-web
 ribbon:
   ConnectTimeout: 10000
   ReadTimeout: 10000
