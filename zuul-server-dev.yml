@@ -16,6 +16,9 @@ zuul:
     pc-circle:
       path: /pc-circle/**
       serviceId: pc-circle-web
+    auth-server:
+      path: /auth-server/**
+      serviceId: auth-server
 ribbon:
   ConnectTimeout: 10000
   ReadTimeout: 10000
