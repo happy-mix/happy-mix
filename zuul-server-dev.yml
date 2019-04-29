@@ -2,31 +2,6 @@ zuul:
   host:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
-  routes:
-    member:
-      path: /member/**  #映射路径
-      serviceId: member  # 指定服务端的名称
-    tools:
-      path: /tools/**
-      serviceId: tools
-    pcone-web:
-      path: /pcone-web/**
-      serviceId: pcone-web
-    ticket:
-      path: /ticket/**
-      serviceId: ticket
-    sys-account:
-      path: /sys-account/**
-      serviceId: sys-account
-    circle-mall:
-      path: /circle-mall/**
-      serviceId: circle-mall
-    circle-core:
-      path: /circle-core/**
-      serviceId: circle-core
-    integral-mall:
-      path: /integral-mall/**
-      serviceId: integral-mall
 ribbon:
   ConnectTimeout: 10000
   ReadTimeout: 10000
