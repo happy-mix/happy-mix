@@ -2,30 +2,20 @@ zuul:
   host:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
+  ignored-services: '*'
   routes:
-    member:
-      path: /member/**
-    tools:
-      path: /tools/**
-      serviceId: tools
-    pcone-web:
-      path: /pcone-web/**
-      serviceId: pcone-web
-    ticket:
-      path: /ticket/**
-      serviceId: ticket
-    sys-account:
-      path: /sys-account/**
-      serviceId: sys-account
-    circle-mall:
-      path: /circle-mall/**
-      serviceId: circle-mall
-    circle-core:
-      path: /circle-core/**
-      serviceId: circle-core
-    integral-mall:
-      path: /integral-mall/**
-      serviceId: integral-mall
+    wechat-member:
+      path: /wechat-member/**
+      serviceId: wechat-member-web
+    wechat-assistant:
+      path: /wechat-assistant/**
+      serviceId: wechat-assistant-web
+    pc-system:
+      path: /pc-system/**
+      serviceId: pc-system-web
+    pc-circle:
+      path: /pc-circle/**
+      serviceId: pc-circle-web
 ribbon:
   ConnectTimeout: 10000
   ReadTimeout: 10000
