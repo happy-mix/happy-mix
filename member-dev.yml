@@ -13,7 +13,7 @@ spring:
   rocketmq:
     test:
       producer:
-        namesrv-addr: 192.168.40.70
+        namesrv-addr: 192.168.248.128:9876;192.168.248.129:9876
         group-name: member-producer
         topic: member
         check-keys: check
