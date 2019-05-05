@@ -1,7 +1,7 @@
 zuul:
   host:
-    connect-timeout-millis: 15000
-    socket-timeout-millis: 60000
+    connect-timeout-millis: 615000
+    socket-timeout-millis: 660000
   ignored-services: '*'
   routes:
     wechat-member:
@@ -26,8 +26,8 @@ zuul:
       serviceId: auth-server
   add-proxy-headers: true
 ribbon:
-  ConnectTimeout: 10000
-  ReadTimeout: 10000
+  ConnectTimeout: 610000
+  ReadTimeout: 610000
 server:
   port: 8031
 eureka:
