@@ -20,6 +20,10 @@ zuul:
       path: /pc-circle/**
       sensitiveHeaders:
       serviceId: pc-circle-web
+    integral-mall:
+      path: /integral-mall/**
+      sensitiveHeaders:
+      serviceId: integral-mall
     auth-server:
       path: /auth-server/**
       sensitiveHeaders:
