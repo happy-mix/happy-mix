@@ -9,18 +9,6 @@ eureka:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 spring:
-  rocketmq:
-    test:
-      consumer:
-        namesrv-addr: 192.168.248.128:9876;192.168.248.129:9876
-        group-name: member-consumer
-        topic: member
-        check-keys: check
-        consume-failure-retry-times: 3
-      producer:
-        namesrv-addr: 192.168.248.128:9876;192.168.248.129:9876
-        group-name: member-transaction-message-producer
-        topic: member-check
   redis:
     database: 0
     timeout: 10000
