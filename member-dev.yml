@@ -11,7 +11,7 @@ eureka:
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 spring:
   rocketmq:
-    test:
+    member:
       producer:
         namesrv-addr: 192.168.248.128:9876;192.168.248.129:9876
         group-name: member-producer
@@ -20,7 +20,7 @@ spring:
         confirm-message-faiure-retry-times: 3
       consumer:
         namesrv-addr: 192.168.248.128:9876;192.168.248.129:9876
-        group-name: living-circle-core-consumer
+        group-name: point-order-consumer
         topic: member-check
         consume-failure-retry-times: 3
   redis:

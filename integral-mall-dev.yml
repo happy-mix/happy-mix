@@ -9,6 +9,19 @@ eureka:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 spring:
+  rocketmq:
+    point:
+      order:
+        consumer:
+          namesrv-addr: 192.168.248.128:9876;192.168.248.129:9876
+          group-name: member-consumer
+          topic: member
+          check-keys: check
+          consume-failure-retry-times: 3
+        producer:
+          namesrv-addr: 192.168.248.128:9876;192.168.248.129:9876
+          group-name: point-order-producer
+          topic: member-check
   redis:
     database: 0
     timeout: 10000
@@ -29,7 +42,7 @@ spring:
       min-idle: 0
   datasource:
     name: dev
-    url: jdbc:mysql://192.168.40.70:8635/hm-circle-mall?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://192.168.40.70:8635/hm-ticket?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
     password: 12345678
     type: com.alibaba.druid.pool.DruidDataSource
@@ -55,3 +68,5 @@ mapper:
 mybatis:
   mapperLocations: classpath:mappers/*.xml
   typeAliasesPackage: cn.lfn.happy.mix.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
