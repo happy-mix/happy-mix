@@ -59,3 +59,4 @@ mybatis:
 SystemConstant:
   memberUrl:
     sendMsg: http://TOOLS/tools/sms/send2phonewithoutmessageCount
+point: 1
