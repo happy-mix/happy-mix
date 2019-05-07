@@ -31,6 +31,3 @@ pay:
     sandboxNotifyUrl: http://test2.zhubaogongyuan.net:888/erp/payWeixin/notifyGemWeiXinPay.do
     certFilePath: D://apiclient_cert.pem
     useSandbox: true
-boy:
-  name: yukx
-  age: 100
