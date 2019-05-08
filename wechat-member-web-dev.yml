@@ -21,3 +21,13 @@ ribbon:
 feign:
   hystrix:
     enabled: true
+pay:
+  weixin:
+    appid: wx55ce2824a1548c9e
+    mchId: 1522296981
+    key: gainhonve7D4YMGwBUTqi1Qe8G1831a8
+    ip: 139.159.204.78
+    notifyUrl: http://test.zberp.net/erp/payWeixin/notifyGemWeiXinPay.do
+    sandboxNotifyUrl: http://test2.zhubaogongyuan.net:888/erp/payWeixin/notifyGemWeiXinPay.do
+    certFilePath: D://apiclient_cert.pem
+    useSandbox: true
