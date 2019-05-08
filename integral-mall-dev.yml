@@ -68,3 +68,5 @@ mapper:
 mybatis:
   mapperLocations: classpath:mappers/*.xml
   typeAliasesPackage: cn.lfn.happy.mix.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
