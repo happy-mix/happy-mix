@@ -19,5 +19,5 @@ eureka:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 server:
-  port: 61010
+  port: 61001
 domainUrl: http://localhost:8031

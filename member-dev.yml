@@ -1,6 +1,6 @@
 evn: dev
 server:
-  port: 61000
+  port: 62007
   max-http-header-size: 10240
 eureka:
   client:
