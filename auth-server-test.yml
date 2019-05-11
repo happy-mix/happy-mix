@@ -1,5 +1,5 @@
 server:
-  port: 70001
+  port: 60101
   max-http-header-size: 10240
 spring:
   redis:
