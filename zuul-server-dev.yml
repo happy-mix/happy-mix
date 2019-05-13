@@ -28,7 +28,7 @@ zuul:
       path: /auth-server/**
       sensitiveHeaders:
       serviceId: auth-server
-    auth-server:
+    pc-circle-web-dev:
       path: /pc-circle-web-dev/**
       sensitiveHeaders:
       serviceId: pc-circle-web-dev
