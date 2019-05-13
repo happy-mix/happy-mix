@@ -28,6 +28,10 @@ zuul:
       path: /auth-server/**
       sensitiveHeaders:
       serviceId: auth-server
+    auth-server:
+      path: /pc-circle-web-dev/**
+      sensitiveHeaders:
+      serviceId: pc-circle-web-dev
   add-proxy-headers: true
 ribbon:
   ConnectTimeout: 610000
