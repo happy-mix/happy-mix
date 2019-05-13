@@ -1,6 +1,4 @@
-server:
-  port: 60001
-  max-http-header-size: 10240
+
 spring:
   redis:
     database: 0
