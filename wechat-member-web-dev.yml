@@ -27,6 +27,6 @@ pay:
     key: gainhonve7D4YMGwBUTqi1Qe8G1831a8
     ip: 139.159.204.78
     notifyUrl: http://test.zberp.net/erp/payWeixin/notifyGemWeiXinPay.do
-    sandboxNotifyUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
+    sandboxNotifyUrl: http://test2.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
     certFilePath: D://apiclient_cert.pem
     useSandbox: true
