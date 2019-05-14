@@ -13,13 +13,13 @@ spring:
     point:
       order:
         consumer:
-          namesrv-addr: 192.168.40.70:9876;192.168.40.70:9876
+          namesrv-addr: 192.168.40.70:9876;192.168.40.80:9876
           group-name: member-consumer
           topic: member
           check-keys: check
           consume-failure-retry-times: 3
         producer:
-          namesrv-addr: 192.168.40.70:9876;192.168.40.70:9876
+          namesrv-addr: 192.168.40.70:9876;192.168.40.80:9876
           group-name: point-order-producer
           topic: member-check
   redis:
