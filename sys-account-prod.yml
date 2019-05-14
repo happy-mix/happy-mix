@@ -1,5 +1,4 @@
 server:
-  port: 61002
   max-http-header-size: 10240
 eureka:
   client:
