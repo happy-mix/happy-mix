@@ -36,8 +36,6 @@ zuul:
 ribbon:
   ConnectTimeout: 610000
   ReadTimeout: 610000
-server:
-  port: 60003
 eureka:
   client:
     service-url:
