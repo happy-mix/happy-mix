@@ -14,6 +14,7 @@ spring:
         namesrv-addr: 192.168.40.70:9876;192.168.40.80:9876
         group-name: member-producer
         topic: member
+        allyAccountAddTopic: ally-account
         check-keys: check
         confirm-message-faiure-retry-times: 3
       consumer:
