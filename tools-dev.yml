@@ -64,6 +64,6 @@ system:
       username: zhangyl
       password: zhangyl2019
       secrect: bec1dc8c07e0458bacc8a4c2039ebbf9
-      sign: \u96f6\u70e6\u607c\u79d1\u6280
+      sign: 零烦恼科技
       template:
         register: 3e197860-439e-42f6-941f-ad2280a171ca
