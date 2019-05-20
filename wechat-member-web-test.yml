@@ -1,3 +1,15 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+server:
+  tomcat:
+    accesslog:
+      directory: /data/logs/wechat_member_web/historyRunLog/access
+      enabled: true
+      pattern: common
+      prefix: wechat-member-web-access
+      suffix: .log
+      rotate: true
 hystrix:
   command:
     default:
