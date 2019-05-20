@@ -42,3 +42,17 @@ pay:
     sandboxNotifyUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
     certFilePath: F://apiclient_cert.pem
     useSandbox: true
+# 认证地址 zuul地址转发
+auth-switch: false
+auth-server: http://127.0.0.1:60003/auth-server
+security:
+  oauth2:
+    client:
+      client-id: CLIENT_USER_WEXIN
+      client-secret: 123456
+      access-token-uri: ${auth-server}/oauth/token
+    resource:
+      id: oauth2_resouce_user_weixin
+      user-info-uri: ${auth-server}/user
+      # 是否使用token info ，两种认证方式选择user info 禁用tokeninfo
+      prefer-token-info: false
