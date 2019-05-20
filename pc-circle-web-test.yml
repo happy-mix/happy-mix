@@ -30,3 +30,18 @@ eureka:
   instance:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
+# 资源认证开关，非调试，请开启
+auth-switch: false
+# 认证地址 zuul地址转发
+auth-server: http://127.0.0.1:60003/auth-server
+security:
+  oauth2:
+    client:
+      client-id: CLIENT_CIRCLE_MANGER
+      client-secret: 123456
+      access-token-uri: ${auth-server}/oauth/token
+    resource:
+      id: oauth2_resouce_circle_pc
+      user-info-uri: ${auth-server}/user
+      prefer-token-info: false
+###################end  开发环境在这里验证参数配置是否正常，验证提交代码后，请维护git配置信息
