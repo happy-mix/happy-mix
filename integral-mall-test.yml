@@ -1,5 +1,13 @@
 server:
   max-http-header-size: 10240
+  tomcat:
+    accesslog:
+      directory: /data/logs/integral_mall/historyRunLog/access
+      enabled: true
+      pattern: common
+      prefix: integral-mall-access
+      suffix: .log
+      rotate: true
 eureka:
   client:
     serviceUrl:
@@ -8,6 +16,8 @@ eureka:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
   redis:
     database: 0
     timeout: 10000
@@ -54,3 +64,23 @@ mapper:
 mybatis:
   mapperLocations: classpath:mappers/*.xml
   typeAliasesPackage: cn.lfn.happy.mix.entity
+systemconstant:
+  goldHunter:
+    #捕金手服务域名
+    baseUrl : http://localhost:8089/jf-yiyuangou-web #http://39.104.121.44/jf-yiyuangou-web
+    #商品列表
+    goodsList: /index/queryGoodsListErp
+    #商品详情
+    goodsInfo: /goodsInfo/queryGoodsInfoErp
+    #分类列表
+    classifyList: /buy/queryClassifyApi
+    #创建订单
+    createOrder: /order/createOrderErp
+    #查询物流信息
+    expressDetails: /express/queryLogisticsInfoErp
+    #订单签收
+    orderConfirm: /order/signOrderErp
+    #查询sku信息
+    skuInfo: /order/getPriceAndStockErp
+    #捕金手验签密钥
+    goldHunterSecret: b8abdc00fe8511e89614e0d55ea09ce5
