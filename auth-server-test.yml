@@ -1,4 +1,16 @@
+server:
+  max-http-header-size: 10240
+  tomcat:
+    accesslog:
+      directory: /data/logs/auth_server/historyRunLog/access
+      enabled: true
+      pattern: common
+      prefix: auth-server-access
+      suffix: .log
+      rotate: true
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
   redis:
     database: 0
     timeout: 10000
@@ -37,3 +49,9 @@ hystrix:
 ribbon:
   ConnectTimeout: 5000
   ReadTimeout: 10000
+weixin:
+  member:
+    appid: wx55ce2824a1548c9e
+    secret: a58d9562b5a359d9aeac29404e1831a8
+logging:
+    config: classpath:log4j2-${spring.profiles.active}.yml
