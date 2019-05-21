@@ -47,4 +47,4 @@ logging:
   level:
     org.springframework: info
     cn.lfn.happy.mix.mappers: debug
-  config: classpath:log4j2-${spring.profiles.active}.yml
+  config: classpath:log4j2-${spring.profiles.active}1.yml

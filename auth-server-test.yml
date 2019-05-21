@@ -54,4 +54,7 @@ weixin:
     appid: wx55ce2824a1548c9e
     secret: a58d9562b5a359d9aeac29404e1831a8
 logging:
-    config: classpath:log4j2-${spring.profiles.active}.yml
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}1.yml
