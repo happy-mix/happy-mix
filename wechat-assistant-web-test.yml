@@ -31,11 +31,6 @@ eureka:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 domainUrl: http://localhost:8031
-logging:
-  level:
-    org.springframework: info
-    cn.lfn.happy.mix.mappers: debug
-  config: classpath:log4j2-${spring.profiles.active}1.yml
 # 认证地址 zuul地址转发
 auth-server: http://127.0.0.1:60003/auth-server
 security:
