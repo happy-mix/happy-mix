@@ -67,24 +67,3 @@ system:
       sign: 零烦恼科技
       template:
         register: 3e197860-439e-42f6-941f-ad2280a171ca
-systemconstant:
-  weixinConstants:
-    mpAppId: wx6a9ed7e30ba12e49
-    mchKey: gainhonve7D4YMGwBUTqi1Qe8G1831a8
-    mchId: 1509776891
-    keyPath: /data/happy/wechat_cert/apiclient_cert.pem
-    notifyUrl: http://localhost:60003/account/point/notifyPointRecharge.do
-    sandboxNotifyUrl: http://huwei.zhubaogongyuan.net:888/pc-circle/account/point/notifyPointRecharge.do
-    useSandbox: true
-    ip: 192.168.40.136
-  weChatConstants:
-    appid: wx6a9ed7e30ba12e49
-    appSecret: 033bac8efea2a3949b4eb0199c106594
-    mchId: 1509776891
-    key: 149b8628f007408d99ad32132520caa2
-    ip: 139.159.204.78
-    notifyUrl: http://test.zberp.net/erp/payWeixin/notifyGemWeiXinPay.do
-    refundUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinRefund.do
-    sandboxNotifyUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
-    certFilePath: D://apiclient_cert.pem
-    useSandbox: true
