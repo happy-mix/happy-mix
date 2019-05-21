@@ -67,8 +67,6 @@ mapper:
 mybatis:
   mapperLocations: classpath:mappers/*.xml
   typeAliasesPackage: cn.lfn.happy.mix.entity
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 pay:
   weixin:
     appid: wx6a9ed7e30ba12e49
