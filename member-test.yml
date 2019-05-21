@@ -80,13 +80,6 @@ mybatis:
 systemconstant:
   memberUrl:
     sendMsg: http://TOOLS/tools/sms/send2phonewithoutmessageCount
-point: 1
-logging:
-  level:
-    org.springframework: info
-    cn.lfn.happy.mix.mappers: debug
-  config: classpath:log4j2-${spring.profiles.active}1.yml
-systemconstant:
   weixinConstants:
     mpAppId: wx55ce2824a1548c9e
     mchKey: gainhonve7D4YMGwBUTqi1Qe8G1831a8
@@ -96,3 +89,9 @@ systemconstant:
     sandboxNotifyUrl: http://huwei.zhubaogongyuan.net:888/pc-circle/account/point/notifyPointRecharge.do
     useSandbox: true
     ip: 192.168.40.136
+point: 1
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}1.yml
