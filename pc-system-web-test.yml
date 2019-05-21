@@ -42,3 +42,8 @@ security:
       id: oauth2_resouce_system_pc
       user-info-uri: ${auth-server}/user
       prefer-token-info: false
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}1.yml
