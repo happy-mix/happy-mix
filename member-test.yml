@@ -1,5 +1,13 @@
 server:
   max-http-header-size: 10240
+  tomcat:
+    accesslog:
+      directory: /data/logs/member/historyRunLog/access
+      enabled: true
+      pattern: common
+      prefix: member-access
+      suffix: .log
+      rotate: true
 eureka:
   client:
     serviceUrl:
@@ -8,6 +16,19 @@ eureka:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 spring:
+  rocketmq:
+    member:
+      producer:
+        namesrv-addr: localhost:9876
+        group-name: member-producer
+        topic: member
+        check-keys: check
+        confirm-message-faiure-retry-times: 3
+      consumer:
+        namesrv-addr: localhost:9876
+        group-name: point-order-consumer
+        topic: member-check
+        consume-failure-retry-times: 3
   redis:
     database: 0
     timeout: 10000
@@ -28,9 +49,9 @@ spring:
       min-idle: 0
   datasource:
     name: dev
-    url: jdbc:mysql://192.168.40.70:8635/hm-member?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
-    username: root
-    password: 12345678
+    url: jdbc:mysql://172.18.202.153:8635/hm-member?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: happy
+    password: happy-mix
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat
@@ -54,7 +75,12 @@ mapper:
 mybatis:
   mapperLocations: classpath:mappers/*.xml
   typeAliasesPackage: cn.lfn.happy.mix.entity
-SystemConstant:
+systemconstant:
   memberUrl:
     sendMsg: http://TOOLS/tools/sms/send2phonewithoutmessageCount
 point: 1
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}.yml
