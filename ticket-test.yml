@@ -19,6 +19,19 @@ eureka:
 spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
+  rocketmq:
+    ticket:
+      producer:
+        namesrv-addr: localhost:9876
+        group-name: ticket-producer
+        topic: ticket
+        check-keys: check
+        confirm-message-faiure-retry-times: 3
+      consumer:
+        namesrv-addr: localhost:9876
+        group-name: good-stock-consumer
+        topic: ticket-check
+        consume-failure-retry-times: 3
   redis:
     database: 0
     timeout: 10000
