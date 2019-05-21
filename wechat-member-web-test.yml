@@ -31,11 +31,6 @@ ribbon:
 feign:
   hystrix:
     enabled: true
-logging:
-  level:
-    org.springframework: info
-    cn.lfn.happy.mix.mappers: debug
-  config: classpath:log4j2-${spring.profiles.active}1.yml
 pay:
   weixin:
     appid: wx6a9ed7e30ba12e49
