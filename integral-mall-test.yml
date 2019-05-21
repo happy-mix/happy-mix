@@ -18,6 +18,19 @@ eureka:
 spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
+  rocketmq:
+    point:
+      order:
+        consumer:
+          namesrv-addr: localhost:9876
+          group-name: member-consumer
+          topic: member
+          check-keys: check
+          consume-failure-retry-times: 3
+        producer:
+          namesrv-addr: localhost:9876
+          group-name: point-order-producer
+          topic: member-check
   redis:
     database: 0
     timeout: 10000
@@ -38,9 +51,9 @@ spring:
       min-idle: 0
   datasource:
     name: dev
-    url: jdbc:mysql://192.168.40.70:8635/hm-circle-mall?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
-    username: root
-    password: 12345678
+    url: jdbc:mysql://172.18.202.153:8635/hm-ticket?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: happy
+    password: happy-mix
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat
@@ -64,23 +77,8 @@ mapper:
 mybatis:
   mapperLocations: classpath:mappers/*.xml
   typeAliasesPackage: cn.lfn.happy.mix.entity
-systemconstant:
-  goldHunter:
-    #捕金手服务域名
-    baseUrl : http://localhost:8089/jf-yiyuangou-web #http://39.104.121.44/jf-yiyuangou-web
-    #商品列表
-    goodsList: /index/queryGoodsListErp
-    #商品详情
-    goodsInfo: /goodsInfo/queryGoodsInfoErp
-    #分类列表
-    classifyList: /buy/queryClassifyApi
-    #创建订单
-    createOrder: /order/createOrderErp
-    #查询物流信息
-    expressDetails: /express/queryLogisticsInfoErp
-    #订单签收
-    orderConfirm: /order/signOrderErp
-    #查询sku信息
-    skuInfo: /order/getPriceAndStockErp
-    #捕金手验签密钥
-    goldHunterSecret: b8abdc00fe8511e89614e0d55ea09ce5
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}.yml
