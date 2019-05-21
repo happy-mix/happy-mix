@@ -43,3 +43,8 @@ security:
       user-info-uri: ${auth-server}/user
       prefer-token-info: false
 ###################end  开发环境在这里验证参数配置是否正常，验证提交代码后，请维护git配置信息
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}1.yml
