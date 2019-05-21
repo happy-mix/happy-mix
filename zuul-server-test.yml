@@ -1,24 +1,41 @@
 zuul:
   host:
-    connect-timeout-millis: 15000
-    socket-timeout-millis: 60000
+    connect-timeout-millis: 615000
+    socket-timeout-millis: 660000
   ignored-services: '*'
   routes:
     wechat-member:
       path: /wechat-member/**
+      sensitiveHeaders:
       serviceId: wechat-member-web
     wechat-assistant:
       path: /wechat-assistant/**
+      sensitiveHeaders:
       serviceId: wechat-assistant-web
     pc-system:
       path: /pc-system/**
+      sensitiveHeaders:
       serviceId: pc-system-web
     pc-circle:
       path: /pc-circle/**
+      sensitiveHeaders:
       serviceId: pc-circle-web
+    integral-mall:
+      path: /integral-mall/**
+      sensitiveHeaders:
+      serviceId: integral-mall
+    auth-server:
+      path: /auth-server/**
+      sensitiveHeaders:
+      serviceId: auth-server
+    pc-circle-web-dev:
+      path: /pc-circle-web-dev/**
+      sensitiveHeaders:
+      serviceId: pc-circle-web-dev
+  add-proxy-headers: true
 ribbon:
-  ConnectTimeout: 10000
-  ReadTimeout: 10000
+  ConnectTimeout: 610000
+  ReadTimeout: 610000
 eureka:
   client:
     service-url:
@@ -26,3 +43,8 @@ eureka:
   instance:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}.yml

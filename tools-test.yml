@@ -1,3 +1,13 @@
+server:
+  tomcat:
+    accesslog:
+      directory: /data/logs/tools/historyRunLog/access
+      #      directory: data/logs/auth-server/historyRunLog/access
+      enabled: true
+      pattern: common
+      prefix: tools-access
+      suffix: .log
+      rotate: true
 eureka:
   client:
     serviceUrl:
@@ -11,6 +21,8 @@ api:
       url: http://api.map.baidu.com/geocoder/v2/?
       key: 35bbf3142cb7e1197ab66475b36d651f
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
   redis:
     database: 0
     timeout: 10000
@@ -63,6 +75,24 @@ system:
       username: zhangyl
       password: zhangyl2019
       secrect: bec1dc8c07e0458bacc8a4c2039ebbf9
-      sign: \u96f6\u70e6\u607c\u79d1\u6280
+      sign: 零烦恼科技
       template:
         register: 3e197860-439e-42f6-941f-ad2280a171ca
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}.yml
+systemconstant:
+  qiniuInfo:
+    # http://p3094mi99.bkt.clouddn.com
+    qiniuDomain: http://img.zberp.net
+    qiniuPrefix: lfnsmsplarform
+    qiniuAccessKey: LYcegljfJYmar6F8Im2MASW87UP7jPkq9GFFQr0u
+    qiniuSecretKey: BtQU4rIu51ORxmmnheJUMaO7oQWQw5U8faYrOwDp
+    qiniuBucketName: erp2018
+  weixinInfo:
+    appid: wx3d27cc3626b44fc9
+    secret: 7e880299b445852799b4d0377dec0a18
+    tokenUrl: https://api.weixin.qq.com/cgi-bin/token
+    wxacodeunlimitUrl: https://api.weixin.qq.com/wxa/getwxacodeunlimit
