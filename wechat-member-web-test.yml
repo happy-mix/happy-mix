@@ -56,3 +56,8 @@ security:
       user-info-uri: ${auth-server}/user
       # 是否使用token info ，两种认证方式选择user info 禁用tokeninfo
       prefer-token-info: false
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}1.yml
