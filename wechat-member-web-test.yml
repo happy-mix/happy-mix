@@ -42,7 +42,7 @@ pay:
     refundUrl: http://happy.zberp.fun/wechat-member/happyDui/circleMall/notifyWeiXinRefund.do
     sandboxNotifyUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
     certFilePath: /data/happy/wechat_cert/apiclient_cert.pem
-  useSandbox: true
+    useSandbox: true
 # 认证地址 zuul地址转发
 auth-server: http://127.0.0.1:60003/auth-server
 security:
