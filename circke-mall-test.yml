@@ -1,5 +1,13 @@
 server:
   max-http-header-size: 10240
+  tomcat:
+    accesslog:
+      directory: /data/logs/circle_mall/historyRunLog/access
+      enabled: true
+      pattern: common
+      prefix: circle-mall-access
+      suffix: .log
+      rotate: true
 eureka:
   client:
     serviceUrl:
@@ -8,6 +16,8 @@ eureka:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
   redis:
     database: 0
     timeout: 10000
