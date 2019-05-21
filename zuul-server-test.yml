@@ -1,3 +1,13 @@
+server:
+  tomcat:
+    accesslog:
+      directory: /data/logs/zuul/historyRunLog/access
+      #      directory: data/logs/auth-server/historyRunLog/access
+      enabled: true
+      pattern: common
+      prefix: zuul-access
+      suffix: .log
+      rotate: true
 zuul:
   host:
     connect-timeout-millis: 615000
