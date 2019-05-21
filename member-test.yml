@@ -86,3 +86,13 @@ logging:
     org.springframework: info
     cn.lfn.happy.mix.mappers: debug
   config: classpath:log4j2-${spring.profiles.active}1.yml
+systemconstant:
+  weixinConstants:
+    mpAppId: wx55ce2824a1548c9e
+    mchKey: gainhonve7D4YMGwBUTqi1Qe8G1831a8
+    mchId: 1522296981
+    keyPath: D://apiclient_cert.pem
+    notifyUrl: http://localhost:60003/account/point/notifyPointRecharge.do
+    sandboxNotifyUrl: http://huwei.zhubaogongyuan.net:888/pc-circle/account/point/notifyPointRecharge.do
+    useSandbox: true
+    ip: 192.168.40.136
