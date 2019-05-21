@@ -31,6 +31,11 @@ ribbon:
 feign:
   hystrix:
     enabled: true
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}1.yml
 pay:
   weixin:
     appid: wx6a9ed7e30ba12e49
@@ -43,7 +48,6 @@ pay:
     certFilePath: F://apiclient_cert.pem
     useSandbox: true
 # 认证地址 zuul地址转发
-auth-switch: false
 auth-server: http://127.0.0.1:60003/auth-server
 security:
   oauth2:
