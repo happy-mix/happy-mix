@@ -20,18 +20,18 @@ zuul:
       path: /pc-circle/**
       sensitiveHeaders:
       serviceId: pc-circle-web
-    integral-mall:
-      path: /integral-mall/**
-      sensitiveHeaders:
-      serviceId: integral-mall
+#    integral-mall:
+#      path: /integral-mall/**
+#      sensitiveHeaders:
+#      serviceId: integral-mall
     auth-server:
       path: /auth-server/**
       sensitiveHeaders:
       serviceId: auth-server
-    pc-circle-web-dev:
-      path: /pc-circle-web-dev/**
-      sensitiveHeaders:
-      serviceId: pc-circle-web-dev
+#    pc-circle-web-dev:
+#      path: /pc-circle-web-dev/**
+#      sensitiveHeaders:
+#      serviceId: pc-circle-web-dev
   add-proxy-headers: true
 ribbon:
   ConnectTimeout: 610000
