@@ -51,8 +51,8 @@ ribbon:
   ReadTimeout: 10000
 weixin:
   member:
-    appid: wx55ce2824a1548c9e
-    secret: a58d9562b5a359d9aeac29404e1831a8
+    appid: wx6a9ed7e30ba12e49
+    secret: 033bac8efea2a3949b4eb0199c106594
 logging:
   level:
     org.springframework: info
