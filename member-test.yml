@@ -81,14 +81,15 @@ systemconstant:
   memberUrl:
     sendMsg: http://TOOLS/tools/sms/send2phonewithoutmessageCount
   weixinConstants:
-    mpAppId: wx55ce2824a1548c9e
-    mchKey: gainhonve7D4YMGwBUTqi1Qe8G1831a8
-    mchId: 1522296981
-    keyPath: D://apiclient_cert.pem
+    mpAppId: wx6a9ed7e30ba12e49
+    appSecret: 033bac8efea2a3949b4eb0199c106594
+    mchKey: 149b8628f007408d99ad32132520caa2
+    mchId: 1509776891
+    keyPath: /data/happy/wechat_cert/apiclient_cert.pem
     notifyUrl: http://test.zberp.fun/pc-circle/account/point/notifyPointRecharge.do
-    sandboxNotifyUrl: http://huwei.zhubaogongyuan.net:888/pc-circle/account/point/notifyPointRecharge.do
+    sandboxNotifyUrl: http://test.zberp.fun/pc-circle/account/point/notifyPointRecharge.do
     useSandbox: false
-    ip: 192.168.40.136
+    ip: 39.108.109.236
 point: 1
 logging:
   level:
