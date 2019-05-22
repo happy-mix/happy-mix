@@ -85,7 +85,7 @@ logging:
 systemconstant:
   goldHunter:
     #捕金手服务域名
-    baseUrl: http://localhost:8089/jf-yiyuangou-web #http://39.104.121.44/jf-yiyuangou-web
+    baseUrl: http://39.104.121.44/jf-yiyuangou-web #http://39.104.121.44/jf-yiyuangou-web
     #商品列表
     goodsList: /index/queryGoodsListErp
     #商品详情
