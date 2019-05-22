@@ -87,7 +87,7 @@ systemconstant:
     keyPath: D://apiclient_cert.pem
     notifyUrl: http://test.zberp.fun/pc-circle/account/point/notifyPointRecharge.do
     sandboxNotifyUrl: http://huwei.zhubaogongyuan.net:888/pc-circle/account/point/notifyPointRecharge.do
-    useSandbox: true
+    useSandbox: false
     ip: 192.168.40.136
 point: 1
 logging:
