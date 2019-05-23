@@ -89,7 +89,7 @@ systemconstant:
     notifyUrl: http://test.zberp.fun/pc-circle/account/point/notifyPointRecharge.do
     sandboxNotifyUrl: http://test.zberp.fun/pc-circle/account/point/notifyPointRecharge.do
     useSandbox: false
-    ip: 39.108.109.236
+    ip: 39.98.71.133
 point: 1
 logging:
   level:

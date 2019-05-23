@@ -37,7 +37,7 @@ pay:
     appSecret: 033bac8efea2a3949b4eb0199c106594
     mchId: 1509776891
     key: 149b8628f007408d99ad32132520caa2
-    ip: 39.108.109.236
+    ip: 39.98.71.133
     notifyUrl: http://happy.zberp.fun/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
     refundUrl: http://happy.zberp.fun/wechat-member/happyDui/circleMall/notifyWeiXinRefund.do
     sandboxNotifyUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
