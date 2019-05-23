@@ -52,9 +52,9 @@ ribbon:
 weixin:
 #    appid: wx6a9ed7e30ba12e49
 #    secret: 033bac8efea2a3949b4eb0199c106594
-    # 周美玲本地调试
-    appid: wx3d27cc3626b44fc9
-    secret: 7e880299b445852799b4d0377dec0a18
+  # 周美玲本地调试
+  appid: wx3d27cc3626b44fc9
+  secret: 7e880299b445852799b4d0377dec0a18
 logging:
   level:
     org.springframework: info
