@@ -18,7 +18,7 @@ spring:
         consume-failure-retry-times: 3
       producer:
         namesrv-addr: 192.168.40.70:9876;192.168.40.70:9876
-        group-name: good-stock-producer
+        group-name: ticket-check-producer
         topic: ticket-check
       producer2:
         namesrv-addr: 192.168.40.70:9876;192.168.40.70:9876
