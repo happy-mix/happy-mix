@@ -92,7 +92,9 @@ systemconstant:
     qiniuSecretKey: BtQU4rIu51ORxmmnheJUMaO7oQWQw5U8faYrOwDp
     qiniuBucketName: erp2018
   weixinInfo:
-    appid: wx3d27cc3626b44fc9
-    secret: 7e880299b445852799b4d0377dec0a18
+    appid: wx6a9ed7e30ba12e49
+    secret: e32158f47a4c5a4539ed1733d0f85bbe
+    #appid: wx3d27cc3626b44fc9
+    #secret: 7e880299b445852799b4d0377dec0a18
     tokenUrl: https://api.weixin.qq.com/cgi-bin/token
     wxacodeunlimitUrl: https://api.weixin.qq.com/wxa/getwxacodeunlimit
