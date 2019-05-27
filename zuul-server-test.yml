@@ -35,9 +35,16 @@ zuul:
       sensitiveHeaders:
       serviceId: auth-server
   add-proxy-headers: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
 ribbon:
-  ConnectTimeout: 610000
-  ReadTimeout: 610000
+  ConnectTimeout: 20000
+  ReadTimeout: 20000
 eureka:
   client:
     service-url:
