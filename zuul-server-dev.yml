@@ -33,13 +33,13 @@ zuul:
 #      sensitiveHeaders:
 #      serviceId: pc-circle-web-dev
   add-proxy-headers: true
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 5000
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
 ribbon:
   ConnectTimeout: 610000
   ReadTimeout: 610000
