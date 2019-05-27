@@ -90,6 +90,7 @@ systemconstant:
     sandboxNotifyUrl: http://test.zberp.fun/pc-circle/api/account/point/notifyPointRecharge.do
     useSandbox: false
     ip: 39.98.71.133
+    wechatFlag: false
 point: 1
 logging:
   level:
