@@ -40,7 +40,7 @@ pay:
     ip: 39.98.71.133
     notifyUrl: http://happy.zberp.fun/wechat-member/api/circleMall/notifyWeiXinPay.do
     refundUrl: http://happy.zberp.fun/wechat-member/api/circleMall/notifyWeiXinRefund.do
-    sandboxNotifyUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/api/circleMall/notifyWeiXinPay.do
+    sandboxNotifyUrl: http://sjq.zhubaogongyuan.net/wechat-member/api/circleMall/notifyWeiXinPay.do
     certFilePath: /data/happy/wechat_cert/apiclient_cert.pem
     useSandbox: false
 # 认证地址 zuul地址转发
