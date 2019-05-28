@@ -22,24 +22,24 @@ spring:
   rocketmq:
       ticket:
         producer:
-          namesrv-addr: 192.168.40.70:9876;192.168.40.70:9876
+          namesrv-addr: localhost:9876
           group-name: ticket-producer
           topic: ticket
           check-keys: check
           confirm-message-faiure-retry-times: 3
         consumer:
-          namesrv-addr: 192.168.40.70:9876;192.168.40.70:9876
+          namesrv-addr: localhost:9876
           group-name: ticket-check-consumer
           topic: ticket-check
           consume-failure-retry-times: 3
         consumer2:
-          namesrv-addr: 192.168.40.70:9876;192.168.40.70:9876
+          namesrv-addr: localhost:9876
           group-name: good-stock-consumer
           topic: stock
           check-keys: check
           consume-failure-retry-times: 3
         producer2:
-          namesrv-addr: 192.168.40.70:9876;192.168.40.70:9876
+          namesrv-addr: localhost:9876
           group-name: good-stock-check-producer
           topic: stock-check
   redis:
