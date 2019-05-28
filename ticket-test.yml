@@ -103,5 +103,5 @@ pay:
     notifyUrl: http://test.zberp.fun/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
     refundUrl: http://test.zberp.fun/wechat-member/happyDui/circleMall/notifyWeiXinRefund.do
     sandboxNotifyUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
-    certFilePath: /data/happy/wechat_cert/apiclient_cert.pem
+    certFilePath: /data/happy/wechat_cert/apiclient_cert.p12
     useSandbox: false
