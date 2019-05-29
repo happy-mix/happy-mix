@@ -1,3 +1,15 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+server:
+  tomcat:
+    accesslog:
+      directory: /data/logs/wechat_assistant_web/historyRunLog/access
+      enabled: true
+      pattern: common
+      prefix: wechat-assistant-web-access
+      suffix: .log
+      rotate: true
 hystrix:
   command:
     default:
@@ -16,6 +28,23 @@ eureka:
     serviceUrl:
       defaultZone: http://happymix:20190415@localhost:8761/eureka
   instance:
-    lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
-    lease-renewal-interval-in-seconds: 5    #设置心跳时长
+    lease-expiration-duration-in-seconds: 90  #超过多少时间删除服务
+    lease-renewal-interval-in-seconds: 30    #设置心跳时长
 domainUrl: http://localhost:8031
+# 认证地址 zuul地址转发
+auth-server: http://127.0.0.1:60003/auth-server
+security:
+  oauth2:
+    client:
+      client-id: CLIENT_ASSISTANT_WEIXIN
+      client-secret: 123456
+      access-token-uri: ${auth-server}/oauth/token
+    resource:
+      id: oauth2_resouce_assistant_weixin
+      user-info-uri: ${auth-server}/user
+      prefer-token-info: false
+logging:
+  level:
+    org.springframework: info
+    cn.lfn.happy.mix.mappers: debug
+  config: classpath:log4j2-${spring.profiles.active}.yml
