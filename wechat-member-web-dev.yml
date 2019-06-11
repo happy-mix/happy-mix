@@ -23,7 +23,7 @@ feign:
 pay:
   weixin:
     appid: wx6a9ed7e30ba12e49
-    appSecret: 033bac8efea2a3949b4eb0199c106594
+    appSecret: 149b8628f007408d99ad32132520caa2
     mchId: 1509776891
     key: 149b8628f007408d99ad32132520caa2
     ip: 139.159.204.78
