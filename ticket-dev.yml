@@ -82,7 +82,7 @@ pay:
     appid: wx6a9ed7e30ba12e49
     appSecret: e32158f47a4c5a4539ed1733d0f85bbe
     mchId: 1509776891
-    key: 149b8628f007408d99ad32132520caa2
+    key: d0f5bbbde4d1f993645b0a6746fb17c8
     ip: 139.159.204.78
     notifyUrl: http://test.zberp.net/erp/payWeixin/notifyGemWeiXinPay.do
     refundUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinRefund.do
