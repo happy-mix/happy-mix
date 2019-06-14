@@ -54,7 +54,7 @@ ribbon:
 weixin:
   member:
     appid: wx6a9ed7e30ba12e49
-    secret: e32158f47a4c5a4539ed1733d0f85bbe
+    secret: d0f5bbbde4d1f993645b0a6746fb17c8
     # 周美玲本地调试
 #    appid: wx3d27cc3626b44fc9
 #    secret: 7e880299b445852799b4d0377dec0a18

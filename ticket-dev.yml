@@ -80,7 +80,7 @@ mybatis:
 pay:
   weixin:
     appid: wx6a9ed7e30ba12e49
-    appSecret: e32158f47a4c5a4539ed1733d0f85bbe
+    appSecret: d0f5bbbde4d1f993645b0a6746fb17c8
     mchId: 1509776891
     key: 149b8628f007408d99ad32132520caa2
     ip: 139.159.204.78
