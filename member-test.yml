@@ -84,7 +84,7 @@ systemconstant:
   weixinConstants:
     mpAppId: wx6a9ed7e30ba12e49
     appSecret: 033bac8efea2a3949b4eb0199c106594
-    mchKey: d0f5bbbde4d1f993645b0a6746fb17c8
+    mchKey: 149b8628f007408d99ad32132520caa2
     mchId: 1509776891
     keyPath: /data/happy/wechat_cert/apiclient_cert.pem
     notifyUrl: http://test.zberp.fun/pc-circle/api/account/point/notifyPointRecharge.do
