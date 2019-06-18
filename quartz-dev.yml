@@ -10,7 +10,7 @@ eureka:
 spring:
   datasource:
     name: dev
-    url: jdbc:mysql://test.zberp.fun:8635/tx-manager?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.40.70:8635/tx-manager?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
     username: happy
     password: happy-mix
     type: com.alibaba.druid.pool.DruidDataSource
