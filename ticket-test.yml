@@ -121,8 +121,10 @@ pay:
     mchId: 1509776891
     key: 149b8628f007408d99ad32132520caa2
     ip: 39.98.71.133
-    notifyUrl: http://test.zberp.fun/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
-    refundUrl: http://test.zberp.fun/wechat-member/happyDui/circleMall/notifyWeiXinRefund.do
+#    notifyUrl: http://test.zberp.fun/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
+#    refundUrl: http://test.zberp.fun/wechat-member/happyDui/circleMall/notifyWeiXinRefund.do
+    notifyUrl: https://www.zberp.fun/wechat-member/api/circleMall/notifyWeiXinPay.do
+    refundUrl: https://www.zberp.fun/wechat-member/api/circleMall/notifyWeiXinRefund.do
     sandboxNotifyUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
     certFilePath: /data/happy/wechat_cert/apiclient_cert.p12
     useSandbox: false
