@@ -67,6 +67,7 @@ system:
       sign: 零烦恼科技
       template:
         register: 3e197860-439e-42f6-941f-ad2280a171ca
+        presentPonint: 8e24cb25-e0ea-451e-9b92-a4dfc2f7794b
 systemconstant:
   qiniuInfo:
     # http://p3094mi99.bkt.clouddn.com
