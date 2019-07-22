@@ -74,7 +74,7 @@ dis:
 system:
   sms:
     tencent:
-      url: https://sms.jpark.vip
+      url: https://sms.zberp.net # 19-07-22 yukx https://sms.jpark.vip
       username: zhangyl
       password: zhangyl2019
       secrect: bec1dc8c07e0458bacc8a4c2039ebbf9
