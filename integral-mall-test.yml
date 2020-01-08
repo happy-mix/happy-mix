@@ -88,7 +88,7 @@ logging:
 systemconstant:
   goldHunter:
     #捕金手服务域名
-    baseUrl: http://39.104.121.44/jf-yiyuangou-web #http://39.104.121.44/jf-yiyuangou-web
+    baseUrl: http://test.bujinshou.com/jf-yiyuangou-web
     #商品列表
     goodsList: /index/queryGoodsListErp
     #商品详情
@@ -104,4 +104,4 @@ systemconstant:
     #查询sku信息
     skuInfo: /order/getPriceAndStockErp
     #捕金手验签密钥
-    goldHunterSecret: b8abdc00fe8511e89614e0d55ea09ce5
+    goldHunterSecret: de8127062b4a4c36bad7490ee9d9a887
