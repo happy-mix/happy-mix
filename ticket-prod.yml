@@ -87,6 +87,8 @@ spring:
     username: happy
     password: HM4W+Shgin32v2mufO0N2cPZx7A=
     type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      connectionInitSqls: set names utf8mb4     
     driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat
     maxActive: 300
