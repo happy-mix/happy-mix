@@ -41,8 +41,11 @@ hystrix:
           thread:
             timeoutInMilliseconds: 55000
 ribbon:
-  ConnectTimeout: 610000
-  ReadTimeout: 610000 
+  ConnectTimeout: 10000
+  ReadTimeout: 10000 
+feign:
+  hystrix:
+    enabled: true  
 eureka:
   client:
     service-url:
