@@ -43,6 +43,9 @@ hystrix:
 ribbon:
   ConnectTimeout: 10000
   ReadTimeout: 10000
+feign:
+  hystrix:
+    enabled: true  
 eureka:
   client:
     service-url:
