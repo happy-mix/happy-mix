@@ -10,7 +10,7 @@ api:
   map:
     baidu:
       url: http://api.map.baidu.com/geocoder/v2/?
-      key: GZYh3ng9S9fxGjM4DAGoSSvz9W4qIedV
+      key: FVtqZz0kH06n1y1TXSeU4jRMk9RONyPD
 spring:
   redis:
     database: 0
