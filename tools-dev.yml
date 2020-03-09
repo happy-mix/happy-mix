@@ -10,6 +10,7 @@ api:
   map:
     baidu:
       url: http://api.map.baidu.com/geocoder/v2/?
+      optimal_route_url: http://api.map.baidu.com/direction/v2/driving
       key: FVtqZz0kH06n1y1TXSeU4jRMk9RONyPD
 spring:
   redis:
