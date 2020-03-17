@@ -62,7 +62,7 @@ system:
   sms:
     tencent:
       # url: https://sms.jpark.vip
-      url: http://192.168.40.70:8060
+      url: http://sms.zhubaogongyuan.net:888
       username: zhangyl
       password: zhangyl2019
       secrect: bec1dc8c07e0458bacc8a4c2039ebbf9
