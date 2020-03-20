@@ -39,10 +39,10 @@ eureka:
   instance:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
-feign:
-  hystrix:
-    enabled: true
 hystrix:
+  threadpool:
+    default:
+        coreSize: 500
   command:
     default:
       execution:
@@ -50,8 +50,11 @@ hystrix:
           thread:
             timeoutInMilliseconds: 15000
 ribbon:
-  ConnectTimeout: 5000
+  ConnectTimeout: 10000
   ReadTimeout: 10000
+feign:
+  hystrix:
+    enabled: true  
 #微信小程序相关信息
 weixin:
   member:

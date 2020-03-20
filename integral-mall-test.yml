@@ -74,6 +74,22 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
+hystrix:
+  threadpool:
+    default:
+        coreSize: 500
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
+feign:
+  hystrix:
+    enabled: true  
 mapper:
   mappers:
   - tk.mybatis.mapper.common.Mapper

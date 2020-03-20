@@ -104,3 +104,19 @@ systemconstant:
     #secret: 7e880299b445852799b4d0377dec0a18
     tokenUrl: https://api.weixin.qq.com/cgi-bin/token
     wxacodeunlimitUrl: https://api.weixin.qq.com/wxa/getwxacodeunlimit
+hystrix:
+  threadpool:
+    default:
+        coreSize: 500
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
+feign:
+  hystrix:
+    enabled: true

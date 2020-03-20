@@ -12,6 +12,8 @@ zuul:
   host:
     connect-timeout-millis: 615000
     socket-timeout-millis: 660000
+    maxTotalConnections: 1000
+    maxPerRouteConnections: 1000
   ignored-services: '*'
   routes:
     wechat-member:
@@ -36,6 +38,9 @@ zuul:
       serviceId: auth-server
   add-proxy-headers: true
 hystrix:
+  threadpool:
+    default:
+        coreSize: 500
   command:
     default:
       execution:
@@ -43,8 +48,11 @@ hystrix:
           thread:
             timeoutInMilliseconds: 15000
 ribbon:
-  ConnectTimeout: 20000
-  ReadTimeout: 20000
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
+feign:
+  hystrix:
+    enabled: true
 eureka:
   client:
     service-url:

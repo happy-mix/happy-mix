@@ -14,6 +14,9 @@ server:
       suffix: .log
       rotate: true
 hystrix:
+  threadpool:
+    default:
+        coreSize: 500
   command:
     default:
       execution:
