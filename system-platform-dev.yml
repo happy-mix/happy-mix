@@ -19,13 +19,13 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 2000
+            timeoutInMilliseconds: 3000
 ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 3000
+  ConnectTimeout: 500
+  ReadTimeout: 2000
 feign:
   hystrix:
-    enabled: true  
+    enabled: true   
 spring:
   rocketmq:
     ally:

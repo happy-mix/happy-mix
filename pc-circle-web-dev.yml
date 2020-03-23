@@ -16,7 +16,7 @@ ribbon:
   ReadTimeout: 3000
 feign:
   hystrix:
-    enabled: true  
+    enabled: true   
 eureka:
   client:
     serviceUrl:
