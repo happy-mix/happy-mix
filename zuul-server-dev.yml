@@ -1,4 +1,6 @@
 zuul:
+  semaphore:
+    max-semaphores: 5000
   host:
     connect-timeout-millis: 2000
     socket-timeout-millis: 2000
@@ -36,7 +38,10 @@ zuul:
 hystrix:
   threadpool:
     default:
-        coreSize: 500
+      coreSize: 500
+      maximumSize: 1000
+      allowMaximumSizeToDivergeFromCoreSize: true
+      maxQueueSize: -1
   command:
     default:
       execution:

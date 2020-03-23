@@ -72,7 +72,10 @@ mybatis:
 hystrix:
   threadpool:
     default:
-        coreSize: 500
+      coreSize: 500
+      maximumSize: 1000
+      allowMaximumSizeToDivergeFromCoreSize: true
+      maxQueueSize: -1
   command:
     default:
       execution:

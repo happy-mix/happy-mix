@@ -1,7 +1,10 @@
 hystrix:
   threadpool:
     default:
-        coreSize: 500
+      coreSize: 500
+      maximumSize: 1000
+      allowMaximumSizeToDivergeFromCoreSize: true
+      maxQueueSize: -1
   command:
     default:
       execution:
@@ -13,7 +16,7 @@ ribbon:
   ReadTimeout: 3000
 feign:
   hystrix:
-    enabled: true
+    enabled: true  
 eureka:
   client:
     serviceUrl:
