@@ -9,8 +9,8 @@ hystrix:
           thread:
             timeoutInMilliseconds: 2000
 ribbon:
-  ConnectTimeout: 2000
-  ReadTimeout: 2000
+  ConnectTimeout: 3000
+  ReadTimeout: 3000
 feign:
   hystrix:
     enabled: true
