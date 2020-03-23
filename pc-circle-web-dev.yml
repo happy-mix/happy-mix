@@ -12,8 +12,10 @@ hystrix:
           thread:
             timeoutInMilliseconds: 2000
 ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 3000
+  ConnectTimeout: 500
+  ReadTimeout: 1000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
 feign:
   hystrix:
     enabled: true   
