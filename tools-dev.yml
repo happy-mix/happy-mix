@@ -66,15 +66,15 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 15000 
+            timeoutInMilliseconds: 30000 
 ribbon:
-  ConnectTimeout: 5000
-  ReadTimeout: 5000
+  ConnectTimeout: 15000
+  ReadTimeout: 15000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 feign:
   hystrix:
-    enabled: true
+    enabled: true 
 #zyl2019 \u77ed\u4fe1
 system:
   sms:
