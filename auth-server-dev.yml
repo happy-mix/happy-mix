@@ -39,7 +39,7 @@ hystrix:
           thread:
             timeoutInMilliseconds: 5000
 ribbon:
-  ConnectTimeout: 500
+  ConnectTimeout: 1500
   ReadTimeout: 1000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
