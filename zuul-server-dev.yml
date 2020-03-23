@@ -1,7 +1,7 @@
 zuul:
   ribbon.eager-load.enabled: true
   semaphore:
-    max-semaphores: 150000
+    max-semaphores: 50000
   host:
     connect-timeout-millis: 5000
     socket-timeout-millis: 5000
@@ -48,8 +48,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 30000
-          strategy: THREAD    
+            timeoutInMilliseconds: 30000 
 ribbon:
   ConnectTimeout: 14000
   ReadTimeout: 15000

@@ -69,11 +69,10 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 30000
-          strategy: THREAD    
+            timeoutInMilliseconds: 30000 
 ribbon:
-  ConnectTimeout: 30000
-  ReadTimeout: 30000
+  ConnectTimeout: 14000
+  ReadTimeout: 15000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 feign:
