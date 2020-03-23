@@ -1,19 +1,16 @@
 hystrix:
   threadpool:
     default:
-      coreSize: 500
-      maximumSize: 1000
-      allowMaximumSizeToDivergeFromCoreSize: true
-      maxQueueSize: -1
+      coreSize: 5000
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 30000 
+            timeoutInMilliseconds: 10000 
 ribbon:
-  ConnectTimeout: 14000
-  ReadTimeout: 15000
+  ConnectTimeout: 4000
+  ReadTimeout: 5000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 feign:
