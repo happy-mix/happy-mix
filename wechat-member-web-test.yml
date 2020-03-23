@@ -30,10 +30,10 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 15000
+            timeoutInMilliseconds: 2000
 ribbon:
-  ConnectTimeout: 10000
-  ReadTimeout: 10000
+  ConnectTimeout: 2000
+  ReadTimeout: 2000
 feign:
   hystrix:
     enabled: true

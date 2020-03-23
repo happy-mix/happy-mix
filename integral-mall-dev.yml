@@ -69,3 +69,19 @@ mapper:
 mybatis:
   mapperLocations: classpath:mappers/*.xml
   typeAliasesPackage: cn.lfn.happy.mix.entity
+hystrix:
+  threadpool:
+    default:
+        coreSize: 500
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+ribbon:
+  ConnectTimeout: 2000
+  ReadTimeout: 2000
+feign:
+  hystrix:
+    enabled: true  
