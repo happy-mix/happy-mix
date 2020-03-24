@@ -72,18 +72,18 @@ mybatis:
 hystrix:
   threadpool:
     default:
-      coreSize: 5000
+      coreSize: 500
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 30000 
+            timeoutInMilliseconds: 3000 
 ribbon:
-  ConnectTimeout: 15000
-  ReadTimeout: 15000
+  ConnectTimeout: 500
+  ReadTimeout: 2000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 feign:
   hystrix:
-    enabled: true 
+    enabled: true
