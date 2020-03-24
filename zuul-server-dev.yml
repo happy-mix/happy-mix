@@ -3,8 +3,8 @@ zuul:
   semaphore:
     max-semaphores: 50000
   host:
-    connect-timeout-millis: 5000
-    socket-timeout-millis: 5000
+    connect-timeout-millis: 50000
+    socket-timeout-millis: 50000
   ignored-services: '*'
   routes:
     wechat-member:
