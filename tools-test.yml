@@ -50,7 +50,7 @@ message:
   accessKey: yourAccessKey
   endpoint: a
   topic: cn-hangzhou
-  sign: 零烦恼科技
+  sign: happy生活圈
   verification:
     templateCode: SMS_133965889
     long:
