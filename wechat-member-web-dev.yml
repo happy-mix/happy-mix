@@ -16,15 +16,15 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 6000
+            timeoutInMilliseconds: 10000
 ribbon:
-  ConnectTimeout: 2000
-  ReadTimeout: 2000
+  ConnectTimeout: 4000
+  ReadTimeout: 4000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 feign:
   hystrix:
-    enabled: true 
+    enabled: true
 pay:
   weixin:
     appid: wx6a9ed7e30ba12e49
