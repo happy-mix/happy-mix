@@ -39,7 +39,7 @@ zuul:
 hystrix:
   threadpool:
     default:
-      coreSize: 5000
+      coreSize: 500
   command:
     default:
       execution:
