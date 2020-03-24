@@ -87,6 +87,3 @@ mapper:
 mybatis:
   mapperLocations: classpath:mappers/*.xml
   typeAliasesPackage: cn.lfn.happy.mix.entity
-feign:
-  hystrix:
-    enabled: true
