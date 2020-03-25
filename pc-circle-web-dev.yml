@@ -1,9 +1,11 @@
 hystrix:
   threadpool:
     default:
-      coreSize: 500
+      coreSize: 1000
   command:
     default:
+      circuitBreaker:
+        requestVolumeThreshold: 1000
       execution:
         isolation:
           thread:
