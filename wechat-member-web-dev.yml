@@ -16,14 +16,12 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 15000
+            timeoutInMilliseconds: 8000
 ribbon:
-  ConnectTimeout: 5000
-  ReadTimeout: 3000
+  ConnectTimeout: 4000
+  ReadTimeout: 4000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
-  MaxConnectionsPerHost: 500
-  MaxTotalConnections: 1000
 feign:
   hystrix:
     enabled: true
