@@ -47,6 +47,9 @@ hystrix:
           thread:
             timeoutInMilliseconds: 1200000
 ribbon:
+  OkToRetryOnAllOperations: false
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
   ConnectTimeout: 300000
   ReadTimeout: 600000
   MaxConnectionsPerHost: 5000
