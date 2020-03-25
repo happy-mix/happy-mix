@@ -57,24 +57,25 @@ dis:
   verificationCode:
     timeout:
       time: 7200
-hystrix:
-  threadpool:
-    default:
-      coreSize: 500
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 30000
+#hystrix:
+#  threadpool:
+#    default:
+#      coreSize: 500
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 30000
 ribbon:
-  ConnectTimeout: 15000
-  ReadTimeout: 15000
+  #  ConnectTimeout: 300000
+  #  ReadTimeout: 600000
+  OkToRetryOnAllOperations: false
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
-feign:
-  hystrix:
-    enabled: true
+#feign:
+#  hystrix:
+#    enabled: true
 #zyl2019 \u77ed\u4fe1
 system:
   sms:
