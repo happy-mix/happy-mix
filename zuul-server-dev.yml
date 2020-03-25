@@ -41,14 +41,36 @@ hystrix:
     default:
       coreSize: 500
   command:
+    wechat-member:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
+    wechat-assistant:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 30000
+            timeoutInMilliseconds: 3000
+wechat-member:
+  ribbon:
+    ConnectTimeout: 15000
+    ReadTimeout: 15000
+    MaxAutoRetries: 0
+    MaxAutoRetriesNextServer: 0
+wechat-assistant:
+  ribbon:
+    ConnectTimeout: 15000
+    ReadTimeout: 15000
+    MaxAutoRetries: 0
+    MaxAutoRetriesNextServer: 0
 ribbon:
-  ConnectTimeout: 15000
-  ReadTimeout: 15000
+  ConnectTimeout: 3000
+  ReadTimeout: 3000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 feign:
