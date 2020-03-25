@@ -10,19 +10,19 @@ server:
 hystrix:
   threadpool:
     default:
-      coreSize: 2000
+      coreSize: 1000
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 4000
+            timeoutInMilliseconds: 16000
 ribbon:
   OkToRetryOnAllOperations: false
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
-  ConnectTimeout: 2000
-  ReadTimeout: 2000
+  ConnectTimeout: 8000
+  ReadTimeout: 8000
   MaxConnectionsPerHost: 5000
   MaxTotalConnections: 5000
 feign:
