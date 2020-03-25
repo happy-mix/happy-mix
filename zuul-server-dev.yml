@@ -1,5 +1,6 @@
 zuul:
-  ribbon.eager-load.enabled: true
+  eager-load:
+    enabled: true
   semaphore:
     max-semaphores: 1200
   host:
