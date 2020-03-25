@@ -1,10 +1,10 @@
 zuul:
   ribbon.eager-load.enabled: true
   semaphore:
-    max-semaphores: 50000
+    max-semaphores: 5000
   host:
-    connect-timeout-millis: 50000
-    socket-timeout-millis: 50000
+    connect-timeout-millis: 5000
+    socket-timeout-millis: 5000
   ignored-services: '*'
   routes:
     wechat-member:
@@ -45,10 +45,10 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 21000
+            timeoutInMilliseconds: 3000
 ribbon:
-  ConnectTimeout: 10000
-  ReadTimeout: 10000
+  ConnectTimeout: 1000
+  ReadTimeout: 1000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 feign:
