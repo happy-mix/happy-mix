@@ -60,18 +60,16 @@ dis:
 hystrix:
   threadpool:
     default:
-      coreSize: 1000
+      coreSize: 500
   command:
     default:
-      circuitBreaker:
-        requestVolumeThreshold: 1000
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 15000
 ribbon:
-  ConnectTimeout: 4000
-  ReadTimeout: 4000
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 feign:
