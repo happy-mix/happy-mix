@@ -55,7 +55,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 3000
+            timeoutInMilliseconds: 15000
 wechat-member:
   ribbon:
     ConnectTimeout: 15000
@@ -69,8 +69,8 @@ wechat-assistant:
     MaxAutoRetries: 0
     MaxAutoRetriesNextServer: 0
 ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 3000
+  ConnectTimeout: 15000
+  ReadTimeout: 15000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
 feign:
