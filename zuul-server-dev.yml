@@ -1,5 +1,4 @@
 zuul:
-  ribbonIsolationStrategy: THREAD
   eager-load:
     enabled: true
   semaphore:
@@ -46,19 +45,22 @@ hystrix:
     default:
       execution:
         isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+          strategy: SEMAPHORE
           thread:
-            timeoutInMilliseconds: 16000
+            timeoutInMilliseconds: 6000
 ribbon:
   OkToRetryOnAllOperations: false
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
-  ConnectTimeout: 8000
-  ReadTimeout: 8000
+  ConnectTimeout: 3000
+  ReadTimeout: 3000
   MaxConnectionsPerHost: 5000
   MaxTotalConnections: 5000
 feign:
   hystrix:
-    enabled: true 
+    enabled: true
 eureka:
   client:
     service-url:
