@@ -1,11 +1,12 @@
 zuul:
+  ribbonIsolationStrategy: THREAD
   eager-load:
     enabled: true
   semaphore:
     max-semaphores: 1200
   host:
-    connect-timeout-millis: 50000
-    socket-timeout-millis: 50000
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
   ignored-services: '*'
   routes:
     wechat-member:
