@@ -7,24 +7,24 @@ eureka:
   instance:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
-hystrix:
-  threadpool:
-    default:
-      coreSize: 500
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 8000
-ribbon:
-  ConnectTimeout: 4000
-  ReadTimeout: 4000
-  MaxAutoRetries: 0
-  MaxAutoRetriesNextServer: 0
-feign:
-  hystrix:
-    enabled: true
+#hystrix:
+#  threadpool:
+#    default:
+#      coreSize: 500
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 8000
+#ribbon:
+#  ConnectTimeout: 4000
+#  ReadTimeout: 4000
+#  MaxAutoRetries: 0
+#  MaxAutoRetriesNextServer: 0
+#feign:
+#  hystrix:
+#    enabled: true
 spring:
   datasource:
     name: dev
