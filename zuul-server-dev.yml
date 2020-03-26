@@ -51,13 +51,13 @@ hystrix:
             maxConcurrentRequests: 1000
           strategy: SEMAPHORE
           thread:
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 100000
 ribbon:
   OkToRetryOnAllOperations: false
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
-  ConnectTimeout: 5000
-  ReadTimeout: 5000
+  ConnectTimeout: 50000
+  ReadTimeout: 50000
   MaxConnectionsPerHost: 5000
   MaxTotalConnections: 5000
 feign:
