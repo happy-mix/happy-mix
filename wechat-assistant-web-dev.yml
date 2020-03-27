@@ -1,0 +1,25 @@
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000
+  command:
+    default:
+      execution:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 30000
+ribbon:
+  OkToRetryOnAllOperations: false
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  ConnectTimeout: 15000
+  ReadTimeout: 15000
+  MaxConnectionsPerHost: 5000
+  MaxTotalConnections: 5000
+feign:
+  hystrix:
+    enabled: true
+domainUrl: http://localhost:8031

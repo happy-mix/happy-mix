@@ -1,0 +1,65 @@
+zuul:
+  eager-load:
+    enabled: true
+  semaphore:
+    max-semaphores: 2000
+  host:
+    connect-timeout-millis: 30000
+    socket-timeout-millis: 30000
+    maxTotalConnections: 2000
+    maxPerRouteConnections: 2000
+  ignored-services: '*'
+  routes:
+    wechat-member:
+      path: /wechat-member/**
+      sensitiveHeaders:
+      serviceId: wechat-member-web
+    wechat-assistant:
+      path: /wechat-assistant/**
+      sensitiveHeaders:
+      serviceId: wechat-assistant-web
+    pc-system:
+      path: /pc-system/**
+      sensitiveHeaders:
+      serviceId: pc-system-web
+    pc-circle:
+      path: /pc-circle/**
+      sensitiveHeaders:
+      serviceId: pc-circle-web
+#    integral-mall:
+#      path: /integral-mall/**
+#      sensitiveHeaders:
+#      serviceId: integral-mall
+    auth-server:
+      path: /auth-server/**
+      sensitiveHeaders:
+      serviceId: auth-server
+#    pc-circle-web-dev:
+#      path: /pc-circle-web-dev/**
+#      sensitiveHeaders:
+#      serviceId: pc-circle-web-dev
+  add-proxy-headers: true
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000
+  command:
+    default:
+      execution:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 30000
+ribbon:
+  OkToRetryOnAllOperations: false
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  ConnectTimeout: 15000
+  ReadTimeout: 15000
+  MaxConnectionsPerHost: 5000
+  MaxTotalConnections: 5000
+feign:
+  hystrix:
+    enabled: true
