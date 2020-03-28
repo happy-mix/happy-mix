@@ -79,7 +79,7 @@ system:
       username: zhangyl
       password: zhangyl2019
       secrect: bec1dc8c07e0458bacc8a4c2039ebbf9
-      sign: 零烦恼科技
+      sign: happy生活圈
       template:
         register: 3e197860-439e-42f6-941f-ad2280a171ca
         presentPonint: 58814ac7-3236-40b0-856a-4a15dde3ae5b
@@ -103,3 +103,27 @@ systemconstant:
     #secret: 7e880299b445852799b4d0377dec0a18
     tokenUrl: https://api.weixin.qq.com/cgi-bin/token
     wxacodeunlimitUrl: https://api.weixin.qq.com/wxa/getwxacodeunlimit
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000
+  command:
+    default:
+      execution:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 20000
+ribbon:
+  OkToRetryOnAllOperations: false
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
+  MaxConnectionsPerHost: 5000
+  MaxTotalConnections: 5000
+feign:
+  hystrix:
+    enabled: true

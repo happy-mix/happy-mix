@@ -42,19 +42,27 @@ eureka:
 hystrix:
   threadpool:
     default:
-        coreSize: 500
+      coreSize: 1000
   command:
     default:
       execution:
         isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+          strategy: SEMAPHORE
           thread:
-            timeoutInMilliseconds: 15000
+            timeoutInMilliseconds: 20000
 ribbon:
+  OkToRetryOnAllOperations: false
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
   ConnectTimeout: 10000
   ReadTimeout: 10000
+  MaxConnectionsPerHost: 5000
+  MaxTotalConnections: 5000
 feign:
   hystrix:
-    enabled: true  
+    enabled: true
 #微信小程序相关信息
 weixin:
   member:

@@ -107,3 +107,27 @@ systemconstant:
     skuInfo: /order/getPriceAndStockErp
     #捕金手验签密钥
     goldHunterSecret: de8127062b4a4c36bad7490ee9d9a887
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000
+  command:
+    default:
+      execution:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 20000
+ribbon:
+  OkToRetryOnAllOperations: false
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
+  MaxConnectionsPerHost: 5000
+  MaxTotalConnections: 5000
+feign:
+  hystrix:
+    enabled: true
