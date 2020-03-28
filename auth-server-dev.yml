@@ -29,6 +29,9 @@ hystrix:
           #是否开启超时熔断
           enabled: true
         isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+          strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 10000
 ribbon:
