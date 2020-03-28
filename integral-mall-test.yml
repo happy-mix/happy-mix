@@ -82,9 +82,6 @@ hystrix:
     default:
       execution:
         isolation:
-          semaphore:
-            maxConcurrentRequests: 1000
-          strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 20000
 ribbon:
@@ -97,7 +94,7 @@ ribbon:
   MaxTotalConnections: 5000
 feign:
   hystrix:
-    enabled: true  
+    enabled: true
 mapper:
   mappers:
   - tk.mybatis.mapper.common.Mapper

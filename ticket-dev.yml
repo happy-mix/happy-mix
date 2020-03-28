@@ -8,9 +8,6 @@ hystrix:
     default:
       execution:
         isolation:
-          semaphore:
-            maxConcurrentRequests: 1000
-          strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 20000
 ribbon:
