@@ -31,7 +31,7 @@ hystrix:
             maxConcurrentRequests: 1000
           strategy: SEMAPHORE
           thread:
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 20000
 ribbon:
   OkToRetryOnAllOperations: false
   MaxAutoRetries: 0
