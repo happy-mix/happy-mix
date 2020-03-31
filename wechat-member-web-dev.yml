@@ -27,6 +27,10 @@ ribbon:
 feign:
   hystrix:
     enabled: true
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
 pay:
   weixin:
     appid: wx6a9ed7e30ba12e49
