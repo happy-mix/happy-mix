@@ -119,7 +119,7 @@ hystrix:
             maxConcurrentRequests: 1000
           strategy: SEMAPHORE
           thread:
-            #目前有两个容器实例，单个请求超时5s,+重试>10s，超15s则熔断
+            #目前有两个容器实例，单个请求超时5s,+重试>5s，超10s则熔断
             timeoutInMilliseconds: 10000
 ribbon:
   OkToRetryOnAllOperations: false
