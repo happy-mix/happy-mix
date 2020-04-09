@@ -104,3 +104,6 @@ mapper:
 mybatis:
   mapperLocations: classpath:mappers/*.xml
   typeAliasesPackage: cn.lfn.happy.mix.entity
+tx-lcn:
+  client:
+    manager-address: happy-mix-tx-manager:8070

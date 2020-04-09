@@ -123,3 +123,6 @@ pay:
     sandboxNotifyUrl: http://sjq.zhubaogongyuan.net:888/wechat-member/happyDui/circleMall/notifyWeiXinPay.do
     certFilePath: /data/happy/wechat_cert/apiclient_cert.p12
     useSandbox: false
+tx-lcn:
+  client:
+    manager-address: happy-mix-tx-manager:8070

@@ -128,3 +128,6 @@ systemconstant:
     skuInfo: /order/getPriceAndStockErp
     #捕金手验签密钥
     goldHunterSecret: de8127062b4a4c36bad7490ee9d9a887
+tx-lcn:
+  client:
+    manager-address: happy-mix-tx-manager:8070
