@@ -68,7 +68,7 @@ pay:
     certFilePath: /data/happy/wechat_cert/apiclient_cert.p12
     useSandbox: false
 # 认证地址 zuul地址转发
-auth-server: http://127.0.0.1:60003/auth-server
+auth-server: http://happy-mix-zuul-server:60003/auth-server
 security:
   oauth2:
     client:
