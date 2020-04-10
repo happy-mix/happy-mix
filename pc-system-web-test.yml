@@ -55,7 +55,7 @@ eureka:
     lease-expiration-duration-in-seconds: 10  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 # 认证地址 zuul地址转发
-auth-server: http://happy-mix-zuul-server:60003/auth-server
+auth-server: https://test.zberp.fun/auth-server
 security:
   oauth2:
     client:

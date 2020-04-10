@@ -56,7 +56,7 @@ eureka:
     lease-renewal-interval-in-seconds: 5    #设置心跳时长
 domainUrl: http://localhost:8031
 # 认证地址 zuul地址转发
-auth-server: http://happy-mix-zuul-server:60003/auth-server
+auth-server: https://test.zberp.fun/auth-server
 security:
   oauth2:
     client:
