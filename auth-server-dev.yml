@@ -40,8 +40,8 @@ ribbon:
   MaxAutoRetriesNextServer: 0
   ConnectTimeout: 3000
   ReadTimeout: 10000
-  MaxConnectionsPerHost: 5000
-  MaxTotalConnections: 5000
+  MaxConnectionsPerHost: 10000
+  MaxTotalConnections: 10000
 feign:
   hystrix:
     enabled: true
