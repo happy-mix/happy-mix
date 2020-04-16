@@ -76,10 +76,6 @@ ribbon:
 feign:
   hystrix:
     enabled: true
-  httpclient:
-    enabled: false
-  okhttp:
-    enabled: true
 #zyl2019 \u77ed\u4fe1
 system:
   sms:

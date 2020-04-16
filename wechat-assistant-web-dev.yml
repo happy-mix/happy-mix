@@ -25,8 +25,4 @@ ribbon:
 feign:
   hystrix:
     enabled: true
-  httpclient:
-    enabled: false
-  okhttp:
-    enabled: true
 domainUrl: http://localhost:8031
