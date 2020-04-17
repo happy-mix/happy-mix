@@ -41,7 +41,7 @@ spring:
       min-idle: 50
   datasource:
     name: dev
-    url: jdbc:mysql://happy-mix-mysql8:8635/hm-ticket?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://happy-mix-mysql8:3306/hm-ticket?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
     username: happy
     password: HM4W+Shgin32v2mufO0N2cPZx7A=
     type: com.alibaba.druid.pool.DruidDataSource
