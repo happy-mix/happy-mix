@@ -18,7 +18,7 @@ spring:
     database: 0
     timeout: 10000
     # Redis服务器地址
-    host: 127.0.0.1
+    host: happy-mix-redis
     # Redis服务器连接端口
     port: 6379
     # Redis服务器连接密码（默认为空）
@@ -35,7 +35,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://happymix:20190415@localhost:8761/eureka
+      defaultZone: http://happymix:20190415@happy-mix-discovery-eureka:8761/eureka
   instance:
     lease-expiration-duration-in-seconds: 90  #超过多少时间删除服务
     lease-renewal-interval-in-seconds: 30    #设置心跳时长

@@ -56,24 +56,11 @@ spring:
     time-zone: GMT+8
   main:
     allow-bean-definition-overriding: true
-  rocketmq:
-    ally:
-      producer:
-        namesrv-addr: localhost:9876
-        group-name: ally-user-producer
-        topic: ally-user
-        check-keys: check
-        confirm-message-faiure-retry-times: 3
-      consumer:
-        namesrv-addr: localhost:9876
-        group-name: ally-user-check-consumer
-        topic: ally-user-check
-        consume-failure-retry-times: 3
   redis:
     database: 0
     timeout: 10000
     # Redis服务器地址
-    host: localhost
+    host: happy-mix-redis
     # Redis服务器连接端口
     port: 6379
     # Redis服务器连接密码（默认为空）
@@ -89,7 +76,7 @@ spring:
       min-idle: 100
   datasource:
     name: dev
-    url: jdbc:mysql://localhost:8635/hm-circle-core?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://happy-mix-mysql8:8635/hm-circle-core?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
     username: happy
     password: HM4W+Shgin32v2mufO0N2cPZx7A=
     type: com.alibaba.druid.pool.DruidDataSource
@@ -122,3 +109,6 @@ logging:
     org.springframework: info
     cn.lfn.happy.mix.mappers: debug
   config: classpath:log4j2-${spring.profiles.active}.yml
+tx-lcn:
+  client:
+    manager-address: happy-mix-tx-manager:8070
