@@ -21,6 +21,10 @@ api:
       url: http://api.map.baidu.com/geocoder/v2/?
       optimal_route_url: http://api.map.baidu.com/direction/v2/driving
       key: FVtqZz0kH06n1y1TXSeU4jRMk9RONyPD
+    tencent:
+      key: GHYBZ-3DZWD-HYV4A-PZEDL-3HLHH-GVBC5
+      address_url: https://apis.map.qq.com/ws/geocoder/v1/?address=
+      distance_url: https://apis.map.qq.com/ws/distance/v1/?mode=driving&
 spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
