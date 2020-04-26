@@ -6,10 +6,10 @@ zuul:
     repository: redis
     default-policy:
       #每个ip 1秒内访问次数不得超过3次且总计访问时间这不得超过18秒
-      limit: 3
-#      quota: 18
+      limit: 50
+      #        quota: 600
       refresh-interval: 1
-      type: origin
+      type: url
     policies:
       #指定某个服务单独配置限流，与默认限流配置互不影响
       #每个Url1秒内访问次数不得超过10次且总计访问时间这不得超过600秒
