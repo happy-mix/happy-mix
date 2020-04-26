@@ -5,18 +5,18 @@ zuul:
     #配置RateLimiter数据存储方式为redis，防止集群时 ConcurrentHashMap 不统一
     repository: redis
     default-policy:
-      #所有服务在1秒内只能有1次请求且所有请求时间总和不得超过60秒
-      limit: 1
+      #所有服务在1秒内只能有100次请求且所有请求时间总和不得超过60秒
+      limit: 100
       quota: 60
       refresh-interval: 1
-    policies:
+#    policies:
       #指定某个服务单独配置限流，与默认限流配置互不影响
       #每个Url60秒内访问次数不得超过10次且总计访问时间这不得超过30秒
-      testservice:
-        limit: 50
-        quota: 30
-        refresh-interval: 1
-        type: url
+#      testservice:
+#        limit: 50
+#        quota: 30
+#        refresh-interval: 1
+#        type: url
   eager-load:
     enabled: true
   semaphore:
