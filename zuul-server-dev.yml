@@ -1,4 +1,22 @@
 zuul:
+  ratelimit:
+    #启用限流策略
+    enabled: true
+    #配置RateLimiter数据存储方式为redis，防止集群时 ConcurrentHashMap 不统一
+    repository: redis
+    default-policy:
+      #所有服务在1秒内只能有1次请求且所有请求时间总和不得超过60秒
+      limit: 1
+      quota: 60
+      refresh-interval: 1
+    policies:
+      #指定某个服务单独配置限流，与默认限流配置互不影响
+      #每个Url60秒内访问次数不得超过10次且总计访问时间这不得超过30秒
+      testservice:
+        limit: 50
+        quota: 30
+        refresh-interval: 1
+        type: url
   eager-load:
     enabled: true
   semaphore:
@@ -69,3 +87,22 @@ ribbon:
 feign:
   hystrix:
     enabled: true
+spring:
+  redis:
+    database: 0
+    timeout: 10000
+    # Redis服务器地址
+    host: 192.168.40.70
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: 12345678
+    # 连接池最大连接数（使用负值表示没有限制）
+    pool:
+      max-active: 500
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 8
+      # 连接池中的最小空闲连接
+      min-idle: 0
