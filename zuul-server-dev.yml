@@ -6,18 +6,18 @@ zuul:
     repository: redis
     default-policy:
       #每个ip1秒内访问次数不得超过3次且总计访问时间这不得超过30秒
-      limit: 60
+      limit: 1
       quota: 1000
-      refresh-interval: 30
+      refresh-interval: 1
       type: origin
     policies:
       #指定某个服务单独配置限流，与默认限流配置互不影响
       #每个Url60秒内访问次数不得超过10次且总计访问时间这不得超过30秒
       wechat-member:
-        limit: 60
+        limit: 10
         quota: 1000
-        refresh-interval: 60
-        type: origin
+        refresh-interval: 1
+        type: url
   eager-load:
     enabled: true
   semaphore:
