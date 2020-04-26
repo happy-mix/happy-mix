@@ -17,7 +17,7 @@ zuul:
         limit: 60
         quota: 1000
         refresh-interval: 60
-        type: url
+        type: origin
   eager-load:
     enabled: true
   semaphore:
