@@ -83,10 +83,10 @@ spring:
       connectionInitSqls: set names utf8mb4    
     driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat
-    maxActive: 20
-    initialSize: 5
+    maxActive: 300
+    initialSize: 10
     maxWait: 60000
-    minIdle: 10
+    minIdle: 50
     timeBetweenEvictionRunsMillis: 2000
     minEvictableIdleTimeMillis: 600000
     validationQuery: select 1
@@ -94,7 +94,7 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-    maxOpenPreparedStatements: 20
+    maxOpenPreparedStatements: 100
 mapper:
   mappers:
   - tk.mybatis.mapper.common.Mapper
