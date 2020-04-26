@@ -5,17 +5,17 @@ zuul:
     #配置RateLimiter数据存储方式为redis，防止集群时 ConcurrentHashMap 不统一
     repository: redis
     default-policy:
-      #每个ip1秒内访问次数不得超过3次且总计访问时间这不得超过30秒
-      limit: 1
-      quota: 1000
+      #每个ip 1秒内访问次数不得超过3次且总计访问时间这不得超过18秒
+      limit: 3
+      quota: 18
       refresh-interval: 1
       type: origin
     policies:
       #指定某个服务单独配置限流，与默认限流配置互不影响
-      #每个Url60秒内访问次数不得超过10次且总计访问时间这不得超过30秒
+      #每个Url1秒内访问次数不得超过10次且总计访问时间这不得超过600秒
       wechat-member:
-        limit: 10
-        quota: 1000
+        limit: 100
+        quota: 600
         refresh-interval: 1
         type: url
   eager-load:
