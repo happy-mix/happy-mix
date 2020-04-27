@@ -4,6 +4,12 @@ hystrix:
       coreSize: 1000
   command:
     default:
+      circuitBreaker:
+        requestVolumeThreshold: 1000
+      fallback:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 50
       execution:
         timeout:
           #是否开启超时熔断
@@ -13,16 +19,23 @@ hystrix:
             maxConcurrentRequests: 1000
           strategy: SEMAPHORE
           thread:
-            timeoutInMilliseconds: 13000
+            #目前有两个容器实例，单个请求超时5s,+重试>10s，超15s则熔断
+            timeoutInMilliseconds: 30000
 ribbon:
   OkToRetryOnAllOperations: false
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
-  ConnectTimeout: 3000
-  ReadTimeout: 10000
+  #ribbon请求连接的超时时间- 限制3秒内必须请求到服务，并不限制服务处理的返回时间
+  ConnectTimeout: 5000
+  #请求处理的超时时间 下级服务响应最大时间,超出时间消费方（路由也是消费方）返回timeout,超时时间不可大于断路器的超时时间
+  ReadTimeout: 5000
   MaxConnectionsPerHost: 5000
   MaxTotalConnections: 5000
 feign:
   hystrix:
+    enabled: true
+  httpclient:
+    enabled: false
+  okhttp:
     enabled: true
 domainUrl: http://localhost:8031
