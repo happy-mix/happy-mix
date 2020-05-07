@@ -87,20 +87,20 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       connectionInitSqls: set names utf8mb4      
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    filters: stat
-    maxActive: 300
-    initialSize: 10
-    maxWait: 60000
-    minIdle: 50
-    timeBetweenEvictionRunsMillis: 2000
-    minEvictableIdleTimeMillis: 600000
-    validationQuery: select 1
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxOpenPreparedStatements: 100
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      filters: stat
+      maxActive: 300
+      initialSize: 10
+      maxWait: 60000
+      minIdle: 50
+      timeBetweenEvictionRunsMillis: 2000
+      minEvictableIdleTimeMillis: 600000
+      validationQuery: select 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 100
 mapper:
   mappers:
   - tk.mybatis.mapper.common.Mapper
